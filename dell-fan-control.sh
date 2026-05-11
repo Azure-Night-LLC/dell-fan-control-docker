@@ -194,8 +194,8 @@ adjust_fan_speed() {
         speed_hex="0x23"
         speed_percent="35"
     else
-        speed_hex="0x1e"
-        speed_percent="30"
+        speed_hex="0x19"
+        speed_percent="25"
     fi
 
     set_fan_speed "$speed_hex"
