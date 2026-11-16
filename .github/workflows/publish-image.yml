@@ -24,11 +24,11 @@ jobs:
           image="ghcr.io/${REPOSITORY,,}"
           {
             echo "tags<<EOF"
-            printf '%s:%s\\n' "$image" "$GITHUB_SHA"
+            printf '%s:%s\n' "$image" "$GITHUB_SHA"
             if [[ "$GITHUB_REF" == refs/tags/* ]]; then
-              printf '%s:%s\\n' "$image" "$GITHUB_REF_NAME"
+              printf '%s:%s\n' "$image" "$GITHUB_REF_NAME"
             else
-              printf '%s:latest\\n' "$image"
+              printf '%s:latest\n' "$image"
             fi
             echo "EOF"
           } >> "$GITHUB_OUTPUT"
